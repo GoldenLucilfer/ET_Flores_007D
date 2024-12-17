@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>editar-perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="usuarioForm">
+    <ion-list>
+      <!-- Campo para editar el username -->
+      <ion-item>
+        <ion-label position="stacked">Nombre de Usuario</ion-label>
+        <ion-input type="text" formControlName="username"></ion-input>
+      </ion-item>
+
+      <!-- Campo para editar el email -->
+      <ion-item>
+        <ion-label position="stacked">Correo Electrónico</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <!-- Botón para guardar los cambios -->
+    <ion-button (click)="guardarCambios()" expand="block" type="submit" [disabled]="!usuarioForm.valid">
+      Guardar Cambios
+    </ion-button>
+  </form>
+</ion-content>
+

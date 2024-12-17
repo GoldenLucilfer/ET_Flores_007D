@@ -1,0 +1,21 @@
+/**ion-content.background{
+    --background : url(/assets/sede_maipu-1.jpg) 100% no-repeat;
+} **/
+
+.swiper-container {
+  margin: 0; /* Elimina el margen */
+    padding: 0;
+  width: 100%;
+  height: 300px; /* Ajusta según el alto que prefieras */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}

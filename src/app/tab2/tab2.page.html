@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let u of usuarios">
+      <ion-label>
+        <h3>ID: {{u.id}}</h3>
+        <h2>Username: {{u.username}}</h2>
+        <h3>Email: {{u.email}}</h3>
+        <h3>Está activo: {{u.isactive}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>

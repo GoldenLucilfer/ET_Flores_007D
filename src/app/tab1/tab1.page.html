@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-content>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="assets/image1.jpg" alt="Imagen 1" />
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="assets/image2.jpg" alt="Imagen 2" />
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="assets/image3.jpg" alt="Imagen 3" />
+        </div>
+      </div>
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </ion-content>
+  
+  <ion-list>
+    <ion-item *ngFor="let e of events">
+      <ion-label>
+        <ion-thumbnail slot="start">
+          <img [src]="e.imageUrl" alt="Imagen del evento" />
+        </ion-thumbnail>
+        <h2 style="font-size: large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nombre: {{e.nombre}}</h2>
+        <h3>Fecha: {{e.fecha}}</h3>
+        <h3>Lugar: {{e.lugar}}</h3>
+        <h2 style="font-size: medium; font-style: italic;">Descripcion: {{e.descripcion}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

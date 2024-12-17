@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Registro evento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Mostrar información solo si existe un evento seleccionado -->
+  <!--<ion-card *ngIf="selectedEvent">
+    <ion-card-header>
+      <ion-card-title>{{ selectedEvent.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Descripción:</strong> {{ selectedEvent.description }}</p>
+      <p><strong>Fecha:</strong> {{ selectedEvent.date }}</p>
+      <p><strong>Hora:</strong> {{ selectedEvent.time }}</p>
+      <p><strong>Ubicación:</strong> {{ selectedEvent.location }}</p>
+      <ion-button expand="full" (click)="registerToEvent(selectedEvent.id)">
+        Registrarse
+      </ion-button>
+    </ion-card-content>
+  </ion-card>-->
+  <ion-card>
+    <ion-button (click)="irQR()" fill="clear">
+    <ion-label>Confirmar registro</ion-label>
+  </ion-button>
+  </ion-card>
+
+
+
+
+
+</ion-content>

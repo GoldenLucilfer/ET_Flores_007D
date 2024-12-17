@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Ajustes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <!-- Opción para cambiar el tema oscuro -->
+    <ion-item>
+      <ion-label>Tema Oscuro</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+
+    <!-- Opción para cambiar el idioma -->
+    <ion-item>
+      <ion-label>Idioma</ion-label>
+      <ion-select placeholder="Seleccionar idioma">
+        <ion-select-option value="es">Español</ion-select-option>
+        <ion-select-option value="en">Inglés</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Control de volumen -->
+    <ion-item>
+      <ion-label>Volumen</ion-label>
+      <ion-range min="0" max="100" step="1" pin="true" value="50">
+        <ion-icon size="small" slot="start" name="volume-mute"></ion-icon>
+        <ion-icon slot="end" name="volume-high"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <!-- Botón para restablecer ajustes -->
+    <ion-item lines="none">
+      <ion-button expand="block" color="danger">Restablecer ajustes</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
